@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>▷ Alan Riveros | Desarrollo everywhere</title><link href="https://alanriveros.github.io/" rel="alternate"></link><link href="https://alanriveros.github.io/feeds/all.atom.xml" rel="self"></link><id>https://alanriveros.github.io/</id><updated>2010-12-05T19:30:00-03:00</updated><entry><title>My super title</title><link href="https://alanriveros.github.io/my-super-post.html" rel="alternate"></link><published>2010-12-03T10:20:00-03:00</published><updated>2010-12-05T19:30:00-03:00</updated><author><name>Alexis Metaireau</name></author><id>tag:alanriveros.github.io,2010-12-03:/my-super-post.html</id><summary type="html">&lt;p&gt;Short version for index and feeds&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Welcome to GitHub Pages&lt;/h2&gt;
-&lt;p&gt;You can use the &lt;a href="https://github.com/alanRiveros/alanRiveros.github.io/edit/master/index.md"&gt;editor on GitHub&lt;/a&gt; to maintain and preview the content for your website in Markdown files.&lt;/p&gt;
-&lt;p&gt;Whenever you commit to this repository, GitHub Pages will run &lt;a href="https://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; to rebuild the pages in your site, from the content in your Markdown files.&lt;/p&gt;
-&lt;h3&gt;Markdown&lt;/h3&gt;
-&lt;p&gt;Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;For more details see &lt;a href="https://guides.github.com/features/mastering-markdown/"&gt;GitHub Flavored Markdown&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Jekyll Themes&lt;/h3&gt;
-&lt;p&gt;Your Pages site will use the layout and styles from the Jekyll theme you have selected in your &lt;a href="https://github.com/alanRiveros/alanRiveros.github.io/settings"&gt;repository settings&lt;/a&gt;. The name of this theme is saved in the Jekyll &lt;code&gt;_config.yml&lt;/code&gt; configuration file.&lt;/p&gt;
-&lt;h3&gt;Support or Contact&lt;/h3&gt;
-&lt;p&gt;Having trouble with Pages? Check out our &lt;a href="https://help.github.com/categories/github-pages-basics/"&gt;documentation&lt;/a&gt; or &lt;a href="https://github.com/contact"&gt;contact support&lt;/a&gt; and we’ll help you sort it out.&lt;/p&gt;</content><category term="pelican"></category><category term="publishing"></category></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>▷ Alan Riveros Desarrollo everywhere</title><link href="https://alanriveros.github.io/" rel="alternate"></link><link href="https://alanriveros.github.io/feeds/all.atom.xml" rel="self"></link><id>https://alanriveros.github.io/</id><updated>2019-01-30T09:51:00-03:00</updated><entry><title>Gran introducción(?)</title><link href="https://alanriveros.github.io/hola.html" rel="alternate"></link><published>2019-01-30T09:51:00-03:00</published><updated>2019-01-30T09:51:00-03:00</updated><author><name>Alan Riveros</name></author><id>tag:alanriveros.github.io,2019-01-30:/hola.html</id><summary type="html">&lt;p&gt;Hola te doy la bienvenida a mi super blog personal y te cuento un poco de que se trata.Este sitio está inspirado por mis anotaciones...&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Bienvenido a mi Palacio Mental&lt;/h2&gt;
+&lt;p&gt;Hola te doy la bienvenida a mi super blog personal y te cuento un poco de que se trata.
+Este sitio está inspirado por mis anotaciones, siempre tomo nota sobre las cosas que estoy aprendiendo y
+en un momento empecé a preguntarme ¿por qué no compartilas? a alguien le puede ser útil,
+tal vez acá encontrás ese punto de vista que te faltaba para terminar de entender un tema
+o  tal vez descubrís algo nuevo =) , también voy a estar publicando mensajes para mi yo del pasado,
+recordatorios y reflexiones místicas.&lt;/p&gt;
+&lt;p&gt;Sentite libre de enviarme un mensaje.&lt;/p&gt;</content><category term="Home"></category><category term="Introduction"></category></entry></feed>
