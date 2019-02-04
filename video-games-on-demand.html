@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Video Games On Demand</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="/" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="/theme/css/code_blocks/github.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="/video-games-on-demand.html" rel="canonical" />
+
+    <meta name="description" content="Acabo de ver una aplicación que me llamó un poco la atención, se llama (GeForce NOW)...">
+
+    <meta name="author" content="AlanRiveros">
+
+    <meta name="tags" content="Python">
+    <meta name="tags" content="clon">
+    <meta name="tags" content="video juegos">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="▷ Alan Riveros Desarrollo everywhere"/>
+<meta property="og:title" content="Video Games On Demand"/>
+<meta property="og:description" content="Acabo de ver una aplicación que me llamó un poco la atención, se llama (GeForce NOW)..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/video-games-on-demand.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-02-04 00:00:00-03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/alanriveros">
+<meta property="article:section" content="Proyecto"/>
+<meta property="article:tag" content="Python"/>
+<meta property="article:tag" content="clon"/>
+<meta property="article:tag" content="video juegos"/>
+<meta property="og:image" content="/assets/images/6.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "Video Games On Demand",
+  "headline": "Video Games On Demand",
+  "datePublished": "2019-02-04 00:00:00-03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "AlanRiveros",
+    "url": "/author/alanriveros"
+  },
+  "image": "/assets/images/6.jpg",
+  "url": "/video-games-on-demand.html",
+  "description": "Acabo de ver una aplicación que me llamó un poco la atención, se llama (GeForce NOW)..."
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="/pages/about/">Hola</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Video Games On Demand</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="/author/alanriveros">Alanriveros</a>
+            | <time datetime="lun. 04 febrero 2019">lun. 04 febrero 2019</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('/assets/images/6.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <h1>Capturador de pantalla con python y opencv</h1>
+<p>Acabo de ver una aplicación que me llamó un poco la atención, se llama <br>
+<a href="https://www.nvidia.com/en-gb/shield/games/geforce-now/">GeForce NOW</a>
+la aplicación aún está en beta pero propone un concepto muy interesante
+Video Juegos on demand, algo así como netflix pero de video juegos, lo cuál
+me pone bastante feliz porque es algo que me parecía raro que nadie hubiera
+intentado.<br>
+Lo que propongo en este post es hacer un clon muy modesto (no me quiero dejar
+la vida en esto).
+Por supuesto esto es una aplicación de tipo cliente-servidor y para no volverme loco<br>
+con las compatibilidades de los juegos va a correr sobre windows.<br>
+Voy a hacer un pequeño listado de las cosas que creo necesarias para este proyecto.  </p>
+<ul>
+<li>Un servidor que corra el juego</li>
+<li>Capturar la ventana del juego</li>
+<li>Encodear las imagenes que se capturan y meterlas en un buffer</li>
+<li>Stremear las imagenes encodeadas por medio de sockets</li>
+<li>Recibir comandos de teclas presionadas y reproducirlas en la ventana que se está capturando</li>
+<li>El cliente debe conectarse al servidor por medio de un puerto (cuack)</li>
+<li>Recibir el stream de datos y mostrarlo en pantalla</li>
+<li>Enviar comandos de teclas presionadas</li>
+</ul>
+<p>Primero voy a empezar con el servidor que captura la ventana del juego, solo porque me pareció<br>
+algo divertido, el codigo lo pego a continuación y luego paso a detallarlo.</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">ImageGrab</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">winguiauto</span> <span class="kn">import</span> <span class="n">findTopWindow</span>
+<span class="kn">import</span> <span class="nn">win32gui</span>
+<span class="kn">import</span> <span class="nn">win32con</span>
+
+<span class="n">hwnd</span> <span class="o">=</span> <span class="n">findTopWindow</span><span class="p">(</span><span class="s2">&quot;Calculadora&quot;</span><span class="p">)</span>
+<span class="n">win32gui</span><span class="o">.</span><span class="n">SetWindowPos</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span> <span class="n">win32con</span><span class="o">.</span><span class="n">HWND_TOPMOST</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span>
+<span class="n">win32con</span><span class="o">.</span><span class="n">SWP_NOMOVE</span> <span class="o">|</span> <span class="n">win32con</span><span class="o">.</span><span class="n">SWP_NOSIZE</span><span class="p">)</span>
+
+
+<span class="n">rect</span> <span class="o">=</span> <span class="n">win32gui</span><span class="o">.</span><span class="n">GetWindowPlacement</span><span class="p">(</span><span class="n">hwnd</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">rect</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="c1">#fourcc = cv2.VideoWriter_fourcc(&#39;X&#39;,&#39;V&#39;,&#39;I&#39;,&#39;D&#39;) #you can use other codecs as well.</span>
+<span class="c1">#vid = cv2.VideoWriter(&#39;record.avi&#39;, fourcc, 8, rect[2:4])</span>
+
+
+<span class="k">while</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">ImageGrab</span><span class="o">.</span><span class="n">grab</span><span class="p">(</span><span class="n">bbox</span><span class="o">=</span><span class="n">rect</span><span class="p">)</span> <span class="c1">#x, y, w, h</span>
+    <span class="n">img_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+    <span class="c1">#frame = cv2.cvtColor(img_np, cv2.COLOR_BGR2GRAY)</span>
+    <span class="c1">#vid.write(img_np)</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;frame&quot;</span><span class="p">,</span> <span class="n">img_np</span><span class="p">)</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="mi">27</span><span class="p">:</span>
+        <span class="k">break</span>
+
+<span class="c1">#vid.release()</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+</pre></div>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Video Games On Demand&amp;url=/video-games-on-demand.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=/video-games-on-demand.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=/video-games-on-demand.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="/tag/python">Python</a><a href="/tag/clon">clon</a><a href="/tag/video-juegos">video juegos</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="/theme/js/script.js"></script>
+
+</body>
+</html>
