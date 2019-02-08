@@ -163,12 +163,11 @@ algo divertido, el codigo lo pego a continuación y luego paso a detallarlo.</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">cv2</span>
 <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">ImageGrab</span>
-<span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">winguiauto</span> <span class="kn">import</span> <span class="n">findTopWindow</span>
 <span class="kn">import</span> <span class="nn">win32gui</span>
 <span class="kn">import</span> <span class="nn">win32con</span>
 
-<span class="n">hwnd</span> <span class="o">=</span> <span class="n">findTopWindow</span><span class="p">(</span><span class="s2">&quot;Calculadora&quot;</span><span class="p">)</span>
+<span class="n">hwnd</span> <span class="o">=</span> <span class="n">findTopWindow</span><span class="p">(</span><span class="s2">&quot;&lt;Nombre Programa&gt;&quot;</span><span class="p">)</span>
 <span class="n">win32gui</span><span class="o">.</span><span class="n">SetWindowPos</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span> <span class="n">win32con</span><span class="o">.</span><span class="n">HWND_TOPMOST</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span>
 <span class="n">win32con</span><span class="o">.</span><span class="n">SWP_NOMOVE</span> <span class="o">|</span> <span class="n">win32con</span><span class="o">.</span><span class="n">SWP_NOSIZE</span><span class="p">)</span>
 
@@ -176,15 +175,9 @@ algo divertido, el codigo lo pego a continuación y luego paso a detallarlo.</p>
 <span class="n">rect</span> <span class="o">=</span> <span class="n">win32gui</span><span class="o">.</span><span class="n">GetWindowPlacement</span><span class="p">(</span><span class="n">hwnd</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="n">rect</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
 
-<span class="c1">#fourcc = cv2.VideoWriter_fourcc(&#39;X&#39;,&#39;V&#39;,&#39;I&#39;,&#39;D&#39;) #you can use other codecs as well.</span>
-<span class="c1">#vid = cv2.VideoWriter(&#39;record.avi&#39;, fourcc, 8, rect[2:4])</span>
-
-
 <span class="k">while</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
     <span class="n">img</span> <span class="o">=</span> <span class="n">ImageGrab</span><span class="o">.</span><span class="n">grab</span><span class="p">(</span><span class="n">bbox</span><span class="o">=</span><span class="n">rect</span><span class="p">)</span> <span class="c1">#x, y, w, h</span>
     <span class="n">img_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
-    <span class="c1">#frame = cv2.cvtColor(img_np, cv2.COLOR_BGR2GRAY)</span>
-    <span class="c1">#vid.write(img_np)</span>
     <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;frame&quot;</span><span class="p">,</span> <span class="n">img_np</span><span class="p">)</span>
     <span class="n">key</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="mi">27</span><span class="p">:</span>
@@ -193,6 +186,56 @@ algo divertido, el codigo lo pego a continuación y luego paso a detallarlo.</p>
 <span class="c1">#vid.release()</span>
 <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
 </pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">ImageGrab</span>
+<span class="kn">from</span> <span class="nn">winguiauto</span> <span class="kn">import</span> <span class="n">findTopWindow</span>
+<span class="kn">import</span> <span class="nn">win32gui</span>
+<span class="kn">import</span> <span class="nn">win32con</span>
+</pre></div>
+
+
+<p>usamos numpy para el manejo de bitmaps, cv2 para mostrar los frames,
+ImageGrab para capturar la pantalla, winguiauto es un modulo wrapper de
+win32gui, lo uso para ubicar las coordenadas de la ventana que vamos a grabar,
+win32con lo tengo por sus constantes</p>
+<div class="highlight"><pre><span></span><span class="n">hwnd</span> <span class="o">=</span> <span class="n">findTopWindow</span><span class="p">(</span><span class="s2">&quot;&lt;Nombre Programa&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>esta linea busca una ventana que tenga de título  <Nombre de programa> y devuelve un
+handler</p>
+<div class="highlight"><pre><span></span><span class="n">win32gui</span><span class="o">.</span><span class="n">SetWindowPos</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span> <span class="n">win32con</span><span class="o">.</span><span class="n">HWND_TOPMOST</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span>
+<span class="n">win32con</span><span class="o">.</span><span class="n">SWP_NOMOVE</span> <span class="o">|</span> <span class="n">win32con</span><span class="o">.</span><span class="n">SWP_NOSIZE</span><span class="p">)</span>
+</pre></div>
+
+
+<p>buscamos la posicion en x, y del handler y hace que esta posicion sea el nuevo
+(0,0)  </p>
+<div class="highlight"><pre><span></span><span class="n">rect</span> <span class="o">=</span> <span class="n">win32gui</span><span class="o">.</span><span class="n">GetWindowPlacement</span><span class="p">(</span><span class="n">hwnd</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+
+<p>guardamos en una variable rect la pos (x,y)</p>
+<div class="highlight"><pre><span></span><span class="k">while</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">ImageGrab</span><span class="o">.</span><span class="n">grab</span><span class="p">(</span><span class="n">bbox</span><span class="o">=</span><span class="n">rect</span><span class="p">)</span> <span class="c1">#x, y, w, h</span>
+    <span class="n">img_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;frame&quot;</span><span class="p">,</span> <span class="n">img_np</span><span class="p">)</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="mi">27</span><span class="p">:</span>
+        <span class="k">break</span>
+</pre></div>
+
+
+<p>guardamos en una variable img el rectangulo que habiamos identificado constantes
+guardo en una variable img_np el frame convertido en un array de numpy  </p>
+<p>para obtener algo de feedback muestro ese frame en pantalla
+por último me fijo si se presionó una tecla, en caso de que se haya presionado ESC
+salgo del bucle y termina el programa, hasta acá llegó la primer version del servidor<br>
+ahora solo queda hacerla crecer un poco.</p>
+<p>este post sigue en construcción...</p>
             </section>
 
             <section class="post-info">
